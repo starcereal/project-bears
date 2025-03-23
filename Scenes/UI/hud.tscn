@@ -1,6 +1,9 @@
-[gd_scene format=3 uid="uid://cv32lchg2nqn3"]
+[gd_scene load_steps=2 format=3 uid="uid://cv32lchg2nqn3"]
 
-[node name="HUD" type="CanvasLayer"]
+[ext_resource type="Script" uid="uid://bwxe7m5ptpta" path="res://Scripts/UI/hud.gd" id="1_sprlj"]
+
+[node name="HUD" type="CanvasLayer" groups=["hud"]]
+script = ExtResource("1_sprlj")
 
 [node name="HoneyLabel" type="Label" parent="."]
 anchors_preset = 7

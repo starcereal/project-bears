@@ -6,7 +6,7 @@ signal mouse_on_structure(mouse_on_object : bool)
 signal give_money
 
 var is_mouse_on : bool = false
-var click_cooldown : float = .2
+var click_cooldown : float = .25
 var cooldown : float = 0
 
 
