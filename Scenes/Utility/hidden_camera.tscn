@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmfs13udvi5i6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r7wbm"]
+
+[node name="HiddenCamera" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_r7wbm")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
