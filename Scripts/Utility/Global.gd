@@ -6,7 +6,7 @@ var pollen_count : float = 0
 var diamond_count : float = 0
 
 # everytime a player upgrades, increase cost by this much
-func new_cost(base_cost : float, structure_level : int):
+func new_cost_formula(base_cost : float, structure_level : int):
 	var new_cost : float
 	
 	#this makes it easier to purchase upgrades at a lower levels

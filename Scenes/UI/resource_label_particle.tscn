@@ -1,7 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dmiitgcfalq3b"]
+[gd_scene load_steps=21 format=3 uid="uid://dmiitgcfalq3b"]
 
 [ext_resource type="Texture2D" uid="uid://bjthxe4a788i5" path="res://Assets/Graphics/Icons/honeyicon.png" id="1_hi8ib"]
 [ext_resource type="Script" uid="uid://b03gkd8v6px6y" path="res://Scenes/UI/resource_label_particle.gd" id="1_qiov7"]
+[ext_resource type="AudioStream" uid="uid://onu7xmacoao4" path="res://Assets/Sounds/SFX/Resources/Cowbell A.wav" id="3_5qpg1"]
+[ext_resource type="AudioStream" uid="uid://c2jws1c6whe0" path="res://Assets/Sounds/SFX/Resources/Cowbell B.wav" id="4_bjms4"]
+[ext_resource type="Texture2D" uid="uid://c7d4slatufc1f" path="res://Assets/Graphics/Effects/Smoke VFX3.png" id="5_bjms4"]
 
 [sub_resource type="Animation" id="Animation_hi8ib"]
 resource_name = "show_resource_count"
@@ -64,6 +67,91 @@ _data = {
 &"show_resource_count": SubResource("Animation_hi8ib")
 }
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_1lndc"]
+playback_mode = 1
+random_pitch = 1.01
+streams_count = 2
+stream_0/stream = ExtResource("3_5qpg1")
+stream_1/stream = ExtResource("4_bjms4")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4mc57"]
+atlas = ExtResource("5_bjms4")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bj08q"]
+atlas = ExtResource("5_bjms4")
+region = Rect2(32, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pfwap"]
+atlas = ExtResource("5_bjms4")
+region = Rect2(64, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pyaxh"]
+atlas = ExtResource("5_bjms4")
+region = Rect2(96, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1lndc"]
+atlas = ExtResource("5_bjms4")
+region = Rect2(128, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ntqo8"]
+atlas = ExtResource("5_bjms4")
+region = Rect2(160, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wsg1b"]
+atlas = ExtResource("5_bjms4")
+region = Rect2(192, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_myyyg"]
+atlas = ExtResource("5_bjms4")
+region = Rect2(224, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jsfya"]
+atlas = ExtResource("5_bjms4")
+region = Rect2(256, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dlja4"]
+atlas = ExtResource("5_bjms4")
+region = Rect2(288, 0, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_muj33"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4mc57")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bj08q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pfwap")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pyaxh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1lndc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ntqo8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wsg1b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_myyyg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jsfya")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dlja4")
+}],
+"loop": false,
+"name": &"default",
+"speed": 18.0
+}]
+
 [node name="ResourceLabelParticle" type="Node2D"]
 script = ExtResource("1_qiov7")
 
@@ -84,4 +172,15 @@ libraries = {
 }
 autoplay = "show_resource_count"
 
+[node name="MineSound" type="AudioStreamPlayer2D" parent="ResourceLabelParticle"]
+stream = SubResource("AudioStreamRandomizer_1lndc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 15)
+sprite_frames = SubResource("SpriteFrames_muj33")
+autoplay = "default"
+frame = 9
+frame_progress = 1.0
+
 [connection signal="animation_finished" from="ResourceLabelParticle/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="finished" from="ResourceLabelParticle/MineSound" to="." method="_on_mine_sound_finished"]
