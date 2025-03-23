@@ -23,4 +23,11 @@ func _physics_process(delta: float) -> void:
 	cooldown = clampf(cooldown - delta, 0, click_cooldown)
 	if is_mouse_on and Input.is_action_pressed("click") and is_zero_approx(cooldown):
 		cooldown = click_cooldown
+		
+		#emit resource particle label
+		var new_resource_label : Object = GlobalPreloads.ResourceLabelParticle.instantiate()
+		new_resource_label.position = get_local_mouse_position()
+		new_resource_label.position.y -= 15
+		owner.add_child(new_resource_label)
+		
 		give_money.emit()

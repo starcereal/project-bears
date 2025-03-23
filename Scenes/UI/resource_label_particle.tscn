@@ -1,3 +1,87 @@
-[gd_scene format=3 uid="uid://dmiitgcfalq3b"]
+[gd_scene load_steps=6 format=3 uid="uid://dmiitgcfalq3b"]
+
+[ext_resource type="Texture2D" uid="uid://bjthxe4a788i5" path="res://Assets/Graphics/Icons/honeyicon.png" id="1_hi8ib"]
+[ext_resource type="Script" uid="uid://b03gkd8v6px6y" path="res://Scenes/UI/resource_label_particle.gd" id="1_qiov7"]
+
+[sub_resource type="Animation" id="Animation_hi8ib"]
+resource_name = "show_resource_count"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -54)]
+}
+
+[sub_resource type="Animation" id="Animation_qiov7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qiov7"]
+_data = {
+&"RESET": SubResource("Animation_qiov7"),
+&"show_resource_count": SubResource("Animation_hi8ib")
+}
 
 [node name="ResourceLabelParticle" type="Node2D"]
+script = ExtResource("1_qiov7")
+
+[node name="ResourceLabelParticle" type="Label" parent="."]
+offset_right = 128.0
+offset_bottom = 49.0
+scale = Vector2(0.5, 0.5)
+text = "1
+"
+
+[node name="Sprite2D" type="Sprite2D" parent="ResourceLabelParticle"]
+position = Vector2(-12, 12)
+texture = ExtResource("1_hi8ib")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="ResourceLabelParticle"]
+libraries = {
+&"": SubResource("AnimationLibrary_qiov7")
+}
+autoplay = "show_resource_count"
+
+[connection signal="animation_finished" from="ResourceLabelParticle/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
