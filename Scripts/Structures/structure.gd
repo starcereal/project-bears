@@ -9,8 +9,14 @@ class_name Structure
 @export var sprite : Sprite2D
 @onready var clickable_area: ClickableArea = $ClickableArea
 
+func _ready() -> void:
+	clickable_area.give_money.connect(give_currency())
+
 func _on_clickable_area_mouse_on_structure(mouse_on_object: bool) -> void:
 	if mouse_on_object:
 		sprite.material.set_shader_parameter("thickness", 1)
 	else:
 		sprite.material.set_shader_parameter("thickness", 0)
+
+func give_currency():
+	print("giving money to player")
