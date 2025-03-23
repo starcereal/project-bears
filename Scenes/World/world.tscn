@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://lvbgewrsii8c"]
+[gd_scene load_steps=4 format=3 uid="uid://lvbgewrsii8c"]
 
 [ext_resource type="PackedScene" uid="uid://cokcnsuq4a15g" path="res://Scenes/Structures/BigTree.tscn" id="1_t1gg8"]
 [ext_resource type="PackedScene" uid="uid://cmfs13udvi5i6" path="res://Scenes/Utility/hidden_camera.tscn" id="2_yp2ti"]
 [ext_resource type="PackedScene" uid="uid://cv32lchg2nqn3" path="res://Scenes/UI/hud.tscn" id="3_3rhlx"]
-[ext_resource type="PackedScene" uid="uid://dmiitgcfalq3b" path="res://Scenes/UI/resource_label_particle.tscn" id="4_vadfg"]
 
 [node name="World" type="Node2D"]
 
@@ -14,6 +13,3 @@ position = Vector2(568, 360)
 position = Vector2(568, 376)
 
 [node name="HUD" parent="." instance=ExtResource("3_3rhlx")]
-
-[node name="ResourceLabelParticle" parent="." instance=ExtResource("4_vadfg")]
-position = Vector2(488, 352)
