@@ -1,5 +1,5 @@
 extends Node2D
-class_name Structure
+class_name ClickableStructure
 
 
 #how to create a new structure:

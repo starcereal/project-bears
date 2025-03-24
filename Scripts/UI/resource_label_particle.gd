@@ -1,23 +1,13 @@
-extends Label
+extends Node2D
+@onready var mine_sound: AudioStreamPlayer2D = $ResourceLabelParticle/MineSound
 
-var is_crit : bool = false
-@onready var crit_icon = $CritIcon
-@onready var animation_player = $AnimationPlayer
+func _ready() -> void:
+	mine_sound.play()
 
-#var damage_scale : float
-#
-#func _ready():
-	#scale *= 1 * (1+(damage_scale*.01))
+func _on_mine_sound_finished() -> void:
+	pass
+	#queue_free()
 
-func _on_animation_player_animation_finished(_anim_name):
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
 	queue_free()
-
-func _ready():
-	if is_crit:
-		animation_player.play("show_crit")
-		crit_icon.show()
-		self_modulate = "orange"
-		z_index += 1
-		
-	else:
-		animation_player.play("show_damage")
