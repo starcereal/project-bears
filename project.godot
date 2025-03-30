@@ -30,6 +30,10 @@ window/stretch/mode="canvas_items"
 
 hud=""
 
+[gui]
+
+theme/custom_font="uid://c04vt4b3vh8gq"
+
 [importer_defaults]
 
 wav={

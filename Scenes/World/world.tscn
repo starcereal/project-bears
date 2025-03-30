@@ -10,6 +10,6 @@
 position = Vector2(568, 360)
 
 [node name="HiddenCamera" parent="." instance=ExtResource("2_yp2ti")]
-position = Vector2(568, 376)
+position = Vector2(584, 376)
 
 [node name="HUD" parent="." instance=ExtResource("3_3rhlx")]
