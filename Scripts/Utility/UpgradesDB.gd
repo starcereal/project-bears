@@ -36,7 +36,7 @@ const UPGRADES = {
 	},
 	"pollen2": {
 		"icon": ICON_PATH + "pollenicon.png",
-		"displayname": "awesome pollen 2",
+		"displayname": "yum pollen",
 		"description": "Increase the power of your clicks.",
 		"costttype": "honey",
 		"basecost": 100,
@@ -44,7 +44,7 @@ const UPGRADES = {
 	},
 	"honey3": {
 		"icon": ICON_PATH + "honeyicon.png",
-		"displayname": "Cool Honey 1",
+		"displayname": "Cool Honey x",
 		"description": "Increase the power of your clicks.",
 		"costttype": "pollen",
 		"basecost": 45,

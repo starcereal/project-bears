@@ -1,6 +1,8 @@
 extends CanvasLayer
 @onready var honey_label: Label = $HoneyLabelContainer/HoneyLabel
 @onready var upgrade_card : Object = GlobalPreloads.upgrade_card
+@onready var pollen_label: Label = $PollenLabelContainer/PollenLabel
+@onready var upgrade_container: HBoxContainer = $UpgradeContainer/UpgradeContainerBackground/UpgradeContainer
 
 #TODO card pulling mechanics
 # create a deck
@@ -21,15 +23,21 @@ var collected_upgrade_card_types = []
 var upgrade_options = []
 var current_options : int = 0
 
+func _ready() -> void:
+	populate_upgrade_container()
+
 func _physics_process(_delta: float) -> void:
 	honey_label.text = str(roundi(Global.honey_count))
+	pollen_label.text = str(roundi(Global.pollen_count))
 
 func get_card_from_db():
 	var db_list = []
+	var db_counter = 0
 	for i in UpgradesDb.UPGRADES:
 		if i in collected_upgrades: #dont repeat collected upgrades
 			pass
 		elif i in upgrade_options: #dont show if its already in the options
+			db_counter += 1
 			pass
 		elif UpgradesDb.UPGRADES[i]["prerequisite"].size() > 0:
 			var to_add = true
@@ -50,4 +58,7 @@ func get_card_from_db():
 func populate_upgrade_container():
 	while current_options < 4:
 		var new_upgrade_card = upgrade_card.instantiate()
-		#new_upgrade_card.
+		new_upgrade_card.item = get_card_from_db()
+		
+		upgrade_container.add_child(new_upgrade_card)
+		current_options += 1

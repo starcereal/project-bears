@@ -27,10 +27,16 @@ func _ready() -> void:
 	
 
 func _on_texture_button_pressed() -> void:
-	
-	
-	hide()
-	buy_sound.play()
+	if UpgradesDb.UPGRADES[item]["costttype"] == "honey":
+		if UpgradesDb.UPGRADES[item]["basecost"] <= Global.honey_count:
+			Global.honey_count -= UpgradesDb.UPGRADES[item]["basecost"]
+			hide()
+			buy_sound.play()
+	elif UpgradesDb.UPGRADES[item]["costttype"] == "pollen":
+		if UpgradesDb.UPGRADES[item]["basecost"] <= Global.pollen_count:
+			Global.pollen_count -= UpgradesDb.UPGRADES[item]["basecost"]
+			hide()
+			buy_sound.play()
 
 
 func _on_buy_sound_finished() -> void:
