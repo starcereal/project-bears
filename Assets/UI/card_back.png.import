@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjthxe4a788i5"
-path="res://.godot/imported/honeyicon.png-16bdd0941dbb55f599379a67c2e85ae7.ctex"
+uid="uid://odjcvehra34y"
+path="res://.godot/imported/card_back.png-3b70539809ccc236b98e8f4381ab0a14.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Graphics/Icons/honeyicon.png"
-dest_files=["res://.godot/imported/honeyicon.png-16bdd0941dbb55f599379a67c2e85ae7.ctex"]
+source_file="res://Assets/UI/card_back.png"
+dest_files=["res://.godot/imported/card_back.png-3b70539809ccc236b98e8f4381ab0a14.ctex"]
 
 [params]
 

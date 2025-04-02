@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=3 uid="uid://dmiitgcfalq3b"]
 
-[ext_resource type="Texture2D" uid="uid://bjthxe4a788i5" path="res://Assets/Graphics/Icons/honeyicon.png" id="1_hi8ib"]
+[ext_resource type="Texture2D" uid="uid://bjthxe4a788i5" path="res://Assets/UI/Icons/honeyicon.png" id="1_hi8ib"]
 [ext_resource type="Script" uid="uid://b03gkd8v6px6y" path="res://Scripts/UI/resource_label_particle.gd" id="1_qiov7"]
 [ext_resource type="AudioStream" uid="uid://onu7xmacoao4" path="res://Assets/Sounds/SFX/Resources/Cowbell A.wav" id="3_5qpg1"]
 [ext_resource type="AudioStream" uid="uid://c2jws1c6whe0" path="res://Assets/Sounds/SFX/Resources/Cowbell B.wav" id="4_bjms4"]

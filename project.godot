@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Global="*res://Scripts/Utility/Global.gd"
 GlobalPreloads="*res://Scripts/Utility/GlobalPreloads.gd"
+UpgradesDb="*res://Scripts/Utility/UpgradesDB.gd"
 
 [display]
 

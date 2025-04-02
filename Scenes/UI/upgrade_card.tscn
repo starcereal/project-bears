@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://cbsdptvmm6com"]
+
+[ext_resource type="Script" uid="uid://ddqv6imwnowgx" path="res://Scripts/UI/upgrade_card.gd" id="1_djitu"]
+[ext_resource type="Texture2D" uid="uid://dmf8o2xs443uk" path="res://Assets/UI/whitecardback.png" id="1_i5unv"]
+[ext_resource type="Texture2D" uid="uid://bjwk8n6l66rrl" path="res://Assets/UI/Icons/pollenicon.png" id="2_djitu"]
+[ext_resource type="AudioStream" uid="uid://xmapbsamxu2h" path="res://Assets/Sounds/SFX/Cards/240776__f4ngy__card-flip.wav" id="4_t8bxp"]
+
+[node name="UpgradeCard" type="Control"]
+custom_minimum_size = Vector2(112, 180)
+layout_mode = 3
+anchors_preset = 0
+mouse_filter = 2
+script = ExtResource("1_djitu")
+
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 128.0
+scale = Vector2(1.4, 1.4)
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource("1_i5unv")
+
+[node name="UpgradeLabel" type="Label" parent="."]
+layout_mode = 0
+offset_top = 152.0
+offset_right = 112.0
+offset_bottom = 169.0
+text = "cool flower"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="UpgradeIcon" type="Sprite2D" parent="."]
+position = Vector2(56, 72)
+scale = Vector2(5, 5)
+texture = ExtResource("2_djitu")
+
+[node name="CardSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_t8bxp")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="finished" from="CardSound" to="." method="_on_card_sound_finished"]

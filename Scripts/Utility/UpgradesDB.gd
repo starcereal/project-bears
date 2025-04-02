@@ -10,197 +10,53 @@ const ICON_PATH = "res://Assets/UI/Icons/"
 
 const UPGRADES = {
 	#region root tree
-	"roottree": {
-		"icon": ICON_PATH + "roottree.png",
-		"displayname": "Root Tree",
+	"honey1": {
+		"icon": ICON_PATH + "honeyicon.png",
+		"displayname": "Cool Honey 1",
 		"description": "Increase the power of your clicks.",
-		"costttype1": "honey",
-		"basecost1": 100,
-		"costttype2": "",
-		"basecost2": 0,
+		"costttype": "honey",
+		"basecost": 11,
+		"prerequisite": []
 	},
-	"maxpop": {
-		"icon": ICON_PATH + "maxpop.png",
-		"displayname": "Max Animal Population",
-		"description": "Allows you to habit more animals.",
-		"costttype1": "honey",
-		"basecost1": 100,
-		"costttype2": "",
-		"basecost2": 0,
+	"pollen1": {
+		"icon": ICON_PATH + "pollenicon.png",
+		"displayname": "Pollen Fever",
+		"description": "Increase the power of your clicks.",
+		"costttype": "honey",
+		"basecost": 11,
+		"prerequisite": []
 	},
-	"maxgarden": {
-		"icon": ICON_PATH + "maxgarden.png",
-		"displayname": "Max Garden Capacity",
-		"description": "Upgrade your facilities to increase the number of available plants.",
-		"costttype1": "honey",
-		"basecost1": 100,
-		"costttype2": "",
-		"basecost2": 0,
+	"honey2": {
+		"icon": ICON_PATH + "honeyicon.png",
+		"displayname": "Cool Honey 1",
+		"description": "Increase the power of your clicks.",
+		"costttype": "honey",
+		"basecost": 11,
+		"prerequisite": []
 	},
-	"grove": {
-		"icon": ICON_PATH + "grove.png",
-		"displayname": "Grove",
-		"description": "Upgrade the grove to levels never seen before.",
-		"costttype1": "honey",
-		"basecost1": 100,
-		"costttype2": "",
-		"basecost2": 0,
+	"pollen2": {
+		"icon": ICON_PATH + "pollenicon.png",
+		"displayname": "awesome pollen 2",
+		"description": "Increase the power of your clicks.",
+		"costttype": "honey",
+		"basecost": 11,
+		"prerequisite": []
 	},
-	
-	#endregion
-	
-	#region plant life
-	
-	"flower1": {
-		"icon": ICON_PATH + "flower1.png",
-		"displayname": "Poppy",
-		"description": "Get your pollen.",
-		"costttype1": "honey",
-		"basecost1": 100,
-		"costttype2": "",
-		"basecost2": 0,
+	"honey3": {
+		"icon": ICON_PATH + "honeyicon.png",
+		"displayname": "Cool Honey 1",
+		"description": "Increase the power of your clicks.",
+		"costttype": "honey",
+		"basecost": 11,
+		"prerequisite": []
 	},
-	"flower2": {
-		"icon": ICON_PATH + "flower2.png",
-		"displayname": "Rose",
-		"description": "Get your pollen.",
-		"costttype1": "honey",
-		"basecost1": 100,
-		"costttype2": "",
-		"basecost2": 0,
-	},
-	"flower3": {
-		"icon": ICON_PATH + "flower3.png",
-		"displayname": "Sunflower",
-		"description": "Get your pollen.",
-		"costttype1": "honey",
-		"basecost1": 100,
-		"costttype2": "",
-		"basecost2": 0,
-	},
-	"flower4": {
-		"icon": ICON_PATH + "flower4.png",
-		"displayname": "Carnation",
-		"description": "Get your pollen.",
-		"costttype1": "honey",
-		"basecost1": 100,
-		"costttype2": "",
-		"basecost2": 0,
-	},
-	"flower5": {
-		"icon": ICON_PATH + "flower5.png",
-		"displayname": "Azalea",
-		"description": "Get your pollen.",
-		"costttype1": "honey",
-		"basecost1": 100,
-		"costttype2": "",
-		"basecost2": 0,
-	},
-	"flower6": {
-		"icon": ICON_PATH + "flower6.png",
-		"displayname": "Lily",
-		"description": "Get your pollen.",
-		"costttype1": "honey",
-		"basecost1": 100,
-		"costttype2": "",
-		"basecost2": 0,
-	},
-
-	#endregion
-	
-	#region animal life
-	"bear1": {
-		"icon": ICON_PATH + "bear1.png",
-		"displayname": "Bear",
-		"description": "Get your pollen.",
-		"costttype1": "honey",
-		"basecost1": 100,
-		"costttype2": "",
-		"basecost2": 0,
-	},
-	"bear2": {
-		"icon": ICON_PATH + "bear1.png",
-		"displayname": "Bear",
-		"description": "Get your pollen.",
-		"costttype1": "honey",
-		"basecost1": 100,
-		"costttype2": "",
-		"basecost2": 0,
-	},
-	"bear3": {
-		"icon": ICON_PATH + "bear1.png",
-		"displayname": "Bear",
-		"description": "Get your pollen.",
-		"costttype1": "honey",
-		"basecost1": 100,
-		"costttype2": "",
-		"basecost2": 0,
-	},
-	"bear4": {
-		"icon": ICON_PATH + "bear1.png",
-		"displayname": "Bear",
-		"description": "Get your pollen.",
-		"costttype1": "honey",
-		"basecost1": 100,
-		"costttype2": "",
-		"basecost2": 0,
-	},
-	"bear5": {
-		"icon": ICON_PATH + "bear1.png",
-		"displayname": "Bear",
-		"description": "Get your pollen.",
-		"costttype1": "honey",
-		"basecost1": 100,
-		"costttype2": "",
-		"basecost2": 0,
-	},
-	"bear6": {
-		"icon": ICON_PATH + "bear1.png",
-		"displayname": "Bear",
-		"description": "Get your pollen.",
-		"costttype1": "honey",
-		"basecost1": 100,
-		"costttype2": "",
-		"basecost2": 0,
-	},
-	#endregion
-	
-	#region prestige
-	"picniccloth": {
-		"icon": ICON_PATH + "bear1.png",
-		"displayname": "Bear",
-		"description": "Get your pollen.",
-		"costttype1": "honey",
-		"basecost1": 100,
-		"costttype2": "",
-		"basecost2": 0,
-	},
-	"picnictable": {
-		"icon": ICON_PATH + "bear1.png",
-		"displayname": "Bear",
-		"description": "Get your pollen.",
-		"costttype1": "honey",
-		"basecost1": 100,
-		"costttype2": "",
-		"basecost2": 0,
-	},
-	"picnicbasket": {
-		"icon": ICON_PATH + "bear1.png",
-		"displayname": "Bear",
-		"description": "Get your pollen.",
-		"costttype1": "honey",
-		"basecost1": 100,
-		"costttype2": "",
-		"basecost2": 0,
-	},
-	"picnicsando": {
-		"icon": ICON_PATH + "bear1.png",
-		"displayname": "Bear",
-		"description": "Get your pollen.",
-		"costttype1": "honey",
-		"basecost1": 100,
-		"costttype2": "",
-		"basecost2": 0,
+	"pollen3": {
+		"icon": ICON_PATH + "pollenicon.png",
+		"displayname": "Cool flower 3",
+		"description": "Drops a cool flower.",
+		"costttype": "honey",
+		"basecost": 11,
+		"prerequisite": []
 	},
 	#endregion
 }
