@@ -14,8 +14,8 @@ const UPGRADES = {
 		"icon": ICON_PATH + "honeyicon.png",
 		"displayname": "Cool Honey 1",
 		"description": "Increase the power of your clicks.",
-		"costttype": "honey",
-		"basecost": 11,
+		"costttype": "pollen",
+		"basecost": 25,
 		"prerequisite": []
 	},
 	"pollen1": {
@@ -23,15 +23,15 @@ const UPGRADES = {
 		"displayname": "Pollen Fever",
 		"description": "Increase the power of your clicks.",
 		"costttype": "honey",
-		"basecost": 11,
+		"basecost": 30,
 		"prerequisite": []
 	},
 	"honey2": {
 		"icon": ICON_PATH + "honeyicon.png",
 		"displayname": "Cool Honey 1",
 		"description": "Increase the power of your clicks.",
-		"costttype": "honey",
-		"basecost": 11,
+		"costttype": "pollen",
+		"basecost": 30,
 		"prerequisite": []
 	},
 	"pollen2": {
@@ -39,15 +39,15 @@ const UPGRADES = {
 		"displayname": "awesome pollen 2",
 		"description": "Increase the power of your clicks.",
 		"costttype": "honey",
-		"basecost": 11,
+		"basecost": 100,
 		"prerequisite": []
 	},
 	"honey3": {
 		"icon": ICON_PATH + "honeyicon.png",
 		"displayname": "Cool Honey 1",
 		"description": "Increase the power of your clicks.",
-		"costttype": "honey",
-		"basecost": 11,
+		"costttype": "pollen",
+		"basecost": 45,
 		"prerequisite": []
 	},
 	"pollen3": {
@@ -55,7 +55,7 @@ const UPGRADES = {
 		"displayname": "Cool flower 3",
 		"description": "Drops a cool flower.",
 		"costttype": "honey",
-		"basecost": 11,
+		"basecost": 100,
 		"prerequisite": []
 	},
 	#endregion

@@ -1,5 +1,6 @@
 extends CanvasLayer
 @onready var honey_label: Label = $HoneyLabelContainer/HoneyLabel
+@onready var upgrade_card : Object = GlobalPreloads.upgrade_card
 
 #TODO card pulling mechanics
 # create a deck
@@ -47,4 +48,6 @@ func get_card_from_db():
 		return null
 
 func populate_upgrade_container():
-	pass
+	while current_options < 4:
+		var new_upgrade_card = upgrade_card.instantiate()
+		#new_upgrade_card.
