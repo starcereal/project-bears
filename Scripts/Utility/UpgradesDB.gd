@@ -122,5 +122,45 @@ const UPGRADES = {
 		"basecost": 10000,
 		"prerequisite": []
 	},
+	"clicksound": {
+		"icon": ICON_PATH + "pollenicon.png",
+		"displayname": "Cool Click Sound",
+		"description": "Drops a cool flower.",
+		"costttype": "honey",
+		"basecost": 10000,
+		"prerequisite": []
+	},
+	"picnictable": {
+		"icon": ICON_PATH + "pollenicon.png",
+		"displayname": "Picnic Table",
+		"description": "Drops a cool flower.",
+		"costttype": "honey",
+		"basecost": 10000,
+		"prerequisite": []
+	},
+	"sleepingbear": {
+		"icon": ICON_PATH + "pollenicon.png",
+		"displayname": "Sleeping Bear",
+		"description": "Drops a cool flower.",
+		"costttype": "honey",
+		"basecost": 10000,
+		"prerequisite": []
+	},
+	"treelevel4": {
+		"icon": ICON_PATH + "pollenicon.png",
+		"displayname": "Honey Pot",
+		"description": "Drops a cool flower.",
+		"costttype": "honey",
+		"basecost": 10000,
+		"prerequisite": ["treelevel3"]
+	},
+	"winner": {
+		"icon": ICON_PATH + "pollenicon.png",
+		"displayname": "YOU WIn",
+		"description": "Drops a cool flower.",
+		"costttype": "honey",
+		"basecost": 10000,
+		"prerequisite": ["treelevel4"]
+	},
 	#endregion
 }

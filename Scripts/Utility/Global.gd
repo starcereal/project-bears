@@ -1,8 +1,8 @@
 extends Node
 
 # hold currency here; hold as float, show as int
-var honey_count : float = 2500
-var pollen_count : float = 250
+var honey_count : float = 2500000
+var pollen_count : float = 25000000
 var diamond_count : float = 0
 
 # everytime a player upgrades, increase cost by this much
