@@ -10,52 +10,116 @@ const ICON_PATH = "res://Assets/UI/Icons/"
 
 const UPGRADES = {
 	#region root tree
-	"honey1": {
+	"poppy": {
 		"icon": ICON_PATH + "honeyicon.png",
-		"displayname": "Cool Honey 1",
+		"displayname": "Poppy",
 		"description": "Increase the power of your clicks.",
-		"costttype": "pollen",
+		"costttype": "honey",
 		"basecost": 25,
 		"prerequisite": []
 	},
-	"pollen1": {
+	"picniccloth": {
 		"icon": ICON_PATH + "pollenicon.png",
-		"displayname": "Pollen Fever",
+		"displayname": "Picnic Cloth",
 		"description": "Increase the power of your clicks.",
 		"costttype": "honey",
 		"basecost": 30,
 		"prerequisite": []
 	},
-	"honey2": {
+	"music": {
 		"icon": ICON_PATH + "honeyicon.png",
-		"displayname": "Cool Honey 1",
+		"displayname": "Music",
 		"description": "Increase the power of your clicks.",
 		"costttype": "pollen",
-		"basecost": 30,
+		"basecost": 80,
 		"prerequisite": []
 	},
-	"pollen2": {
+	"sittingbear": {
 		"icon": ICON_PATH + "pollenicon.png",
-		"displayname": "yum pollen",
+		"displayname": "sittingbear",
 		"description": "Increase the power of your clicks.",
 		"costttype": "honey",
 		"basecost": 100,
 		"prerequisite": []
 	},
-	"honey3": {
+	"sunlight": {
 		"icon": ICON_PATH + "honeyicon.png",
-		"displayname": "Cool Honey x",
+		"displayname": "Sunlight",
 		"description": "Increase the power of your clicks.",
 		"costttype": "pollen",
 		"basecost": 45,
 		"prerequisite": []
 	},
-	"pollen3": {
+	"cloverfield": {
 		"icon": ICON_PATH + "pollenicon.png",
-		"displayname": "Cool flower 3",
+		"displayname": "Clover Field",
 		"description": "Drops a cool flower.",
 		"costttype": "honey",
 		"basecost": 100,
+		"prerequisite": []
+	},
+	"treelevel2": {
+		"icon": ICON_PATH + "pollenicon.png",
+		"displayname": "Level 2 Tree",
+		"description": "Drops a cool flower.",
+		"costttype": "honey",
+		"basecost": 200,
+		"prerequisite": []
+	},
+	"wind": {
+		"icon": ICON_PATH + "pollenicon.png",
+		"displayname": "Wind",
+		"description": "Drops a cool flower.",
+		"costttype": "pollen",
+		"basecost": 75,
+		"prerequisite": []
+	},
+	"grass": {
+		"icon": ICON_PATH + "pollenicon.png",
+		"displayname": "Grass",
+		"description": "Drops a cool flower.",
+		"costttype": "honey",
+		"basecost": 500,
+		"prerequisite": []
+	},
+	"picnicbasket": {
+		"icon": ICON_PATH + "pollenicon.png",
+		"displayname": "Picnic Basket",
+		"description": "Drops a cool flower.",
+		"costttype": "honey",
+		"basecost": 750,
+		"prerequisite": []
+	},
+	"sandobear": {
+		"icon": ICON_PATH + "pollenicon.png",
+		"displayname": "Sando Bear",
+		"description": "Drops a cool flower.",
+		"costttype": "honey",
+		"basecost": 1005,
+		"prerequisite": []
+	},
+	"treelevel3": {
+		"icon": ICON_PATH + "pollenicon.png",
+		"displayname": "Level 3 Tree",
+		"description": "Drops a cool flower.",
+		"costttype": "honey",
+		"basecost": 1800,
+		"prerequisite": ["treelevel2"]
+	},
+	"coolmusic": {
+		"icon": ICON_PATH + "pollenicon.png",
+		"displayname": "Cool Music",
+		"description": "Drops a cool flower.",
+		"costttype": "honey",
+		"basecost": 755,
+		"prerequisite": []
+	},
+	"honeypot": {
+		"icon": ICON_PATH + "pollenicon.png",
+		"displayname": "Honey Pot",
+		"description": "Drops a cool flower.",
+		"costttype": "honey",
+		"basecost": 10000,
 		"prerequisite": []
 	},
 	#endregion

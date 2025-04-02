@@ -30,6 +30,7 @@ func _physics_process(_delta: float) -> void:
 	honey_label.text = str(roundi(Global.honey_count))
 	pollen_label.text = str(roundi(Global.pollen_count))
 
+
 func get_card_from_db():
 	var db_list = []
 	var db_counter = 0
@@ -48,15 +49,18 @@ func get_card_from_db():
 				db_list.append(i)
 		else:
 			db_list.append(i)
-	if db_list.size() > current_options:
-		var next_item = db_list.pick_random()
+	if db_list.size() > 0:
+		var next_item = db_list[0]
 		upgrade_options.append(next_item)
 		return next_item
 	else:
 		return null
 
+func draw_from_deck():
+	pass
+
 func populate_upgrade_container():
-	while current_options < 4:
+	while current_options < 4 and collected_upgrades.size() != UpgradesDb.UPGRADES.size():
 		var new_upgrade_card = upgrade_card.instantiate()
 		new_upgrade_card.item = get_card_from_db()
 		
@@ -64,7 +68,8 @@ func populate_upgrade_container():
 		current_options += 1
 
 func upgrade_hud(upgrade):
-	print("upgrading...")
+	current_options -= 1
+	collected_upgrades.append(upgrade)
 	match upgrade:
 		pass
 	populate_upgrade_container()
