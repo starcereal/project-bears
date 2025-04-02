@@ -12,7 +12,7 @@ var item = null
 signal selected_upgrade(upgrade)
 
 func _ready() -> void:
-	connect("selected_upgrade", Callable(hud, "upgrade_character"))
+	connect("selected_upgrade", Callable(hud, "upgrade_hud"))
 	if item == null:
 		item = "honey1"
 	
@@ -32,11 +32,14 @@ func _on_texture_button_pressed() -> void:
 			Global.honey_count -= UpgradesDb.UPGRADES[item]["basecost"]
 			hide()
 			buy_sound.play()
+			emit_signal("selected_upgrade", item)
 	elif UpgradesDb.UPGRADES[item]["costttype"] == "pollen":
 		if UpgradesDb.UPGRADES[item]["basecost"] <= Global.pollen_count:
 			Global.pollen_count -= UpgradesDb.UPGRADES[item]["basecost"]
 			hide()
 			buy_sound.play()
+			emit_signal("selected_upgrade", item)
+			
 
 
 func _on_buy_sound_finished() -> void:

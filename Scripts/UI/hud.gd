@@ -48,8 +48,8 @@ func get_card_from_db():
 				db_list.append(i)
 		else:
 			db_list.append(i)
-	if db_list.size() > 0:
-		var next_item = db_list[0]
+	if db_list.size() > current_options:
+		var next_item = db_list.pick_random()
 		upgrade_options.append(next_item)
 		return next_item
 	else:
@@ -62,3 +62,10 @@ func populate_upgrade_container():
 		
 		upgrade_container.add_child(new_upgrade_card)
 		current_options += 1
+
+func upgrade_hud(upgrade):
+	print("upgrading...")
+	match upgrade:
+		pass
+	populate_upgrade_container()
+	#here is where the magic happens
