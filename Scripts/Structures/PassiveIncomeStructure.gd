@@ -7,8 +7,7 @@ class_name PassiveIncome
 # how much money per second we give
 @export var currency_income : float = 5
 
-
-func _on_timer_timeout() -> void:
+func activate_structure():
 	if currency_type == 0: #honey
 		Global.honey_count += currency_income
 	elif currency_type == 1: #pollen
