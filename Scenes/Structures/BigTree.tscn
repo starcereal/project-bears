@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cokcnsuq4a15g"]
 
-[ext_resource type="Texture2D" uid="uid://06fwgx48o0wy" path="res://Assets/Graphics/Structures/tree.png" id="1_v5rjt"]
 [ext_resource type="Script" uid="uid://bqtvcs7hyb1nv" path="res://Scripts/Structures/clickable_structure.gd" id="1_vyo28"]
+[ext_resource type="Texture2D" uid="uid://76s8cdfondlr" path="res://Assets/Graphics/Structures/tree/tree.png" id="2_trgpq"]
 [ext_resource type="PackedScene" uid="uid://5qmvhqorv3gl" path="res://Scenes/Structures/clickable_area.tscn" id="4_6wuft"]
 
 [sub_resource type="Shader" id="Shader_trgpq"]
@@ -42,10 +42,10 @@ void fragment() {
 shader = SubResource("Shader_trgpq")
 shader_parameter/clr = Color(0.854902, 0.647059, 0.12549, 1)
 shader_parameter/type = 2
-shader_parameter/thickness = 0.0
+shader_parameter/thickness = 1.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_trgpq"]
-size = Vector2(48, 48)
+size = Vector2(128, 128)
 
 [node name="BigTree" type="Node2D" node_paths=PackedStringArray("sprite")]
 script = ExtResource("1_vyo28")
@@ -53,8 +53,8 @@ sprite = NodePath("BigTreeSprite")
 
 [node name="BigTreeSprite" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_6wuft")
-scale = Vector2(3, 3)
-texture = ExtResource("1_v5rjt")
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_trgpq")
 
 [node name="ClickableArea" parent="." instance=ExtResource("4_6wuft")]
 

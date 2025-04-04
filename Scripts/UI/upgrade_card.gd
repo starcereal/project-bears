@@ -6,6 +6,7 @@ extends Control
 @onready var upgrade_icon: Sprite2D = $UpgradeIcon
 @onready var cost_label: Label = $CostLabel
 @onready var cost_icon: Sprite2D = $CostIcon
+@onready var texture_button: TextureButton = $TextureButton
 
 var item = null
 
@@ -24,6 +25,7 @@ func _ready() -> void:
 		upgrade_name.text = UpgradesDb.UPGRADES[item]["displayname"]
 		upgrade_icon.texture = load(UpgradesDb.UPGRADES[item]["icon"])
 		cost_label.text = str(UpgradesDb.UPGRADES[item]["basecost"])
+		texture_button.tooltip_text = UpgradesDb.UPGRADES[item]["description"]
 	
 
 func _on_texture_button_pressed() -> void:

@@ -33,6 +33,7 @@ hud=""
 
 [gui]
 
+timers/tooltip_delay_sec=0.05
 theme/custom_font="uid://c04vt4b3vh8gq"
 
 [importer_defaults]
