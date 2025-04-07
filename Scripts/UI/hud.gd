@@ -74,3 +74,9 @@ func upgrade_hud(upgrade):
 		pass
 	populate_upgrade_container()
 	#here is where the magic happens
+
+
+
+func _on_income_timer_timeout() -> void:
+	Global.honey_count += Global.calc_income_per_sec(Global.honey_per_second, Global.hps_multiplier)
+	Global.pollen_count += Global.calc_income_per_sec(Global.pollen_per_second, Global.pps_multiplier)

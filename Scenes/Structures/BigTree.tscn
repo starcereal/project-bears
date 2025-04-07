@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cokcnsuq4a15g"]
 
 [ext_resource type="Script" uid="uid://bqtvcs7hyb1nv" path="res://Scripts/Structures/clickable_structure.gd" id="1_vyo28"]
-[ext_resource type="Texture2D" uid="uid://76s8cdfondlr" path="res://Assets/Graphics/Structures/tree/tree.png" id="2_trgpq"]
+[ext_resource type="Texture2D" uid="uid://bvdbs2quxrihf" path="res://Assets/Graphics/Structures/tree/TreeBloom.png" id="2_trgpq"]
 [ext_resource type="PackedScene" uid="uid://5qmvhqorv3gl" path="res://Scenes/Structures/clickable_area.tscn" id="4_6wuft"]
 
 [sub_resource type="Shader" id="Shader_trgpq"]

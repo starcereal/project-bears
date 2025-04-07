@@ -9,6 +9,6 @@ class_name PassiveIncome
 
 func activate_structure():
 	if currency_type == 0: #honey
-		Global.honey_count += currency_income
+		Global.honey_per_second += currency_income
 	elif currency_type == 1: #pollen
-		Global.pollen_count += currency_income
+		Global.pollen_per_second += currency_income
