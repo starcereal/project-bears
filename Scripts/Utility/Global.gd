@@ -11,6 +11,8 @@ var honey_per_second : float = 0
 var pollen_per_second : float = 0
 var diamond_per_second : float = 0
 
+var honey_per_click : float = 1
+
 var hps_multiplier : float = 0
 var pps_multiplier : float = 0
 var dds_multiplier : float = 0

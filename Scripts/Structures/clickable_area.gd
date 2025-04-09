@@ -28,6 +28,7 @@ func _physics_process(delta: float) -> void:
 		var new_resource_label : Object = GlobalPreloads.ResourceLabelParticle.instantiate()
 		new_resource_label.position = get_local_mouse_position()
 		new_resource_label.position.y -= 15
+		#get_tree().get_first_node_in_group("hud").add_child(new_resource_label)
 		owner.add_child(new_resource_label)
 		
 		give_money.emit()

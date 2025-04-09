@@ -1,10 +1,34 @@
-[gd_scene load_steps=4 format=3 uid="uid://lvbgewrsii8c"]
+[gd_scene load_steps=5 format=3 uid="uid://lvbgewrsii8c"]
 
 [ext_resource type="PackedScene" uid="uid://cokcnsuq4a15g" path="res://Scenes/Structures/BigTree.tscn" id="1_t1gg8"]
+[ext_resource type="Texture2D" uid="uid://bmiqb568as32p" path="res://Assets/Graphics/Textures/Paper001_1K-PNG_Color.png" id="1_vadfg"]
 [ext_resource type="PackedScene" uid="uid://cmfs13udvi5i6" path="res://Scenes/Utility/hidden_camera.tscn" id="2_yp2ti"]
 [ext_resource type="PackedScene" uid="uid://cv32lchg2nqn3" path="res://Scenes/UI/hud.tscn" id="3_3rhlx"]
 
 [node name="World" type="Node2D"]
+
+[node name="Ground" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_vadfg")
+stretch_mode = 1
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 720.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.85098, 0.768627, 0.701961, 1)
 
 [node name="BigTree" parent="." instance=ExtResource("1_t1gg8")]
 position = Vector2(568, 360)
