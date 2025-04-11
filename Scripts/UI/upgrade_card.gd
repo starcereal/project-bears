@@ -18,7 +18,7 @@ func _ready() -> void:
 		queue_free()
 	if item != null:
 		if UpgradesDb.UPGRADES[item]["costttype"] == "honey":
-			cost_icon.texture = preload("res://Assets/UI/Icons/honeyicon.png")
+			cost_icon.texture = preload("res://Assets/UI/Icons/honey_icon.png")
 		elif UpgradesDb.UPGRADES[item]["costttype"] == "pollen":
 			cost_icon.texture = preload("res://Assets/UI/Icons/pollenicon.png")
 		

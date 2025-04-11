@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 @onready var mine_sound: AudioStreamPlayer2D = $ResourceLabelParticle/MineSound
 @onready var resource_label_particle: Label = $ResourceLabelParticle
 

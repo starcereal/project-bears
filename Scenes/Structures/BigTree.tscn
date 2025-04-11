@@ -42,7 +42,7 @@ void fragment() {
 shader = SubResource("Shader_trgpq")
 shader_parameter/clr = Color(0.854902, 0.647059, 0.12549, 1)
 shader_parameter/type = 2
-shader_parameter/thickness = 1.0
+shader_parameter/thickness = 15.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_trgpq"]
 size = Vector2(128, 128)

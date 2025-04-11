@@ -1,14 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://cbsdptvmm6com"]
+[gd_scene load_steps=10 format=3 uid="uid://cbsdptvmm6com"]
 
 [ext_resource type="Script" uid="uid://ddqv6imwnowgx" path="res://Scripts/UI/upgrade_card.gd" id="1_djitu"]
 [ext_resource type="Texture2D" uid="uid://dmf8o2xs443uk" path="res://Assets/UI/whitecardback.png" id="1_i5unv"]
-[ext_resource type="Texture2D" uid="uid://bjwk8n6l66rrl" path="res://Assets/UI/Icons/pollenicon.png" id="2_djitu"]
+[ext_resource type="Texture2D" uid="uid://ctqi731tpaaa5" path="res://Assets/UI/Icons/honey_icon.png" id="3_si1xg"]
 [ext_resource type="AudioStream" uid="uid://b5beppas5vipy" path="res://Assets/Sounds/SFX/Cards/Coin Bag Drop Wood A.wav" id="4_ua3pj"]
 [ext_resource type="AudioStream" uid="uid://f80rmvgi2wl7" path="res://Assets/Sounds/SFX/Cards/Coin Bag Drop Wood B.wav" id="5_si1xg"]
 [ext_resource type="AudioStream" uid="uid://dc3iewak3yk13" path="res://Assets/Sounds/SFX/Cards/Coin Bag Drop Wood C.wav" id="6_pmi3y"]
 [ext_resource type="AudioStream" uid="uid://iwy4eijroae7" path="res://Assets/Sounds/SFX/Cards/Coin Bag Drop Wood D.wav" id="7_tvajg"]
 [ext_resource type="AudioStream" uid="uid://8w0kumtq56cg" path="res://Assets/Sounds/SFX/Cards/Coin Bag Drop Wood E.wav" id="8_f6geb"]
-[ext_resource type="Texture2D" uid="uid://bjthxe4a788i5" path="res://Assets/UI/Icons/honeyicon.png" id="9_si1xg"]
 
 [sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_4qpks"]
 streams_count = 5
@@ -44,8 +43,7 @@ vertical_alignment = 1
 
 [node name="UpgradeIcon" type="Sprite2D" parent="."]
 position = Vector2(56, 88)
-scale = Vector2(5, 5)
-texture = ExtResource("2_djitu")
+texture = ExtResource("3_si1xg")
 
 [node name="BuySound" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamRandomizer_4qpks")
@@ -63,7 +61,8 @@ vertical_alignment = 1
 
 [node name="CostIcon" type="Sprite2D" parent="."]
 position = Vector2(94, 18)
-texture = ExtResource("9_si1xg")
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_si1xg")
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
 [connection signal="finished" from="BuySound" to="." method="_on_buy_sound_finished"]

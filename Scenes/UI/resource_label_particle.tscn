@@ -1,7 +1,7 @@
 [gd_scene load_steps=21 format=3 uid="uid://dmiitgcfalq3b"]
 
-[ext_resource type="Texture2D" uid="uid://bjthxe4a788i5" path="res://Assets/UI/Icons/honeyicon.png" id="1_hi8ib"]
 [ext_resource type="Script" uid="uid://b03gkd8v6px6y" path="res://Scripts/UI/resource_label_particle.gd" id="1_qiov7"]
+[ext_resource type="Texture2D" uid="uid://ctqi731tpaaa5" path="res://Assets/UI/Icons/honey_icon.png" id="2_bjms4"]
 [ext_resource type="AudioStream" uid="uid://onu7xmacoao4" path="res://Assets/Sounds/SFX/Resources/Cowbell A.wav" id="3_5qpg1"]
 [ext_resource type="AudioStream" uid="uid://c2jws1c6whe0" path="res://Assets/Sounds/SFX/Resources/Cowbell B.wav" id="4_bjms4"]
 [ext_resource type="Texture2D" uid="uid://c7d4slatufc1f" path="res://Assets/Graphics/Effects/Smoke VFX3.png" id="5_bjms4"]
@@ -152,20 +152,25 @@ animations = [{
 "speed": 18.0
 }]
 
-[node name="ResourceLabelParticle" type="Node2D"]
+[node name="ResourceLabelParticle" type="Control"]
+layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_qiov7")
 
 [node name="ResourceLabelParticle" type="Label" parent="."]
 offset_right = 128.0
 offset_bottom = 49.0
 scale = Vector2(0.5, 0.5)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
 text = "1
 "
 metadata/_edit_use_anchors_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="ResourceLabelParticle"]
-position = Vector2(-12, 12)
-texture = ExtResource("1_hi8ib")
+position = Vector2(-14, 6)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_bjms4")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="ResourceLabelParticle"]
 libraries = {

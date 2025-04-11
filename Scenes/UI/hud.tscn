@@ -1,11 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://cv32lchg2nqn3"]
+[gd_scene load_steps=7 format=3 uid="uid://cv32lchg2nqn3"]
 
 [ext_resource type="Script" uid="uid://bwxe7m5ptpta" path="res://Scripts/UI/hud.gd" id="1_sprlj"]
-[ext_resource type="Texture2D" uid="uid://bjthxe4a788i5" path="res://Assets/UI/Icons/honeyicon.png" id="2_ny26j"]
-[ext_resource type="Texture2D" uid="uid://bjwk8n6l66rrl" path="res://Assets/UI/Icons/pollenicon.png" id="3_fdl0h"]
+[ext_resource type="Texture2D" uid="uid://bmiqb568as32p" path="res://Assets/Graphics/Textures/Paper001_1K-PNG_Color.png" id="2_8glcj"]
+[ext_resource type="Texture2D" uid="uid://cijhivpj261fl" path="res://Assets/Graphics/Structures/picnic_assets_cleaner.png" id="3_8glcj"]
+[ext_resource type="Shader" uid="uid://d0ig3ggw6poq5" path="res://Resources/roundedcorner.gdshader" id="3_vsu76"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ny26j"]
 bg_color = Color(0.360784, 0.407843, 0.321569, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ux5h0"]
+shader = ExtResource("3_vsu76")
+shader_parameter/corner_scale = 0.05
 
 [node name="HUD" type="CanvasLayer" groups=["hud"]]
 script = ExtResource("1_sprlj")
@@ -28,35 +33,49 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_ny26j")
 
-[node name="UpgradeContainerBackground" type="Panel" parent="UpgradeContainer"]
+[node name="TextureRect" type="TextureRect" parent="UpgradeContainer"]
+modulate = Color(0.360784, 0.407843, 0.321569, 1)
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 208.0
+texture = ExtResource("2_8glcj")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="UpgradeContainerBackground" type="TextureRect" parent="UpgradeContainer"]
+self_modulate = Color(0.313726, 0.286275, 0.223529, 1)
+material = SubResource("ShaderMaterial_ux5h0")
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -256.0
+offset_left = -288.0
 offset_top = -96.0
-offset_right = 320.0
+offset_right = 288.0
 offset_bottom = 96.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("2_8glcj")
+expand_mode = 1
 
 [node name="UpgradeContainer" type="HBoxContainer" parent="UpgradeContainer/UpgradeContainerBackground"]
 layout_mode = 0
-offset_left = 16.0
+offset_left = 8.0
 offset_top = 8.0
-offset_right = 560.0
-offset_bottom = 192.0
+offset_right = 568.0
+offset_bottom = 184.0
 theme_override_constants/separation = 15
+alignment = 1
 
 [node name="HoneyLabelContainer" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_left = 24.0
-offset_top = 520.0
+offset_top = 560.0
 offset_right = 64.0
-offset_bottom = 560.0
+offset_bottom = 600.0
 
 [node name="HoneyLabel" type="Label" parent="HoneyLabelContainer"]
 layout_mode = 1
@@ -67,7 +86,7 @@ anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = 84.0
 offset_top = -24.0
-offset_right = 340.0
+offset_right = 276.0
 offset_bottom = 56.0
 grow_horizontal = 2
 grow_vertical = 0
@@ -80,41 +99,9 @@ vertical_alignment = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="HoneyLabelContainer"]
 position = Vector2(56, 56)
-scale = Vector2(3.875, 3.875)
-texture = ExtResource("2_ny26j")
-
-[node name="PollenLabelContainer" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 24.0
-offset_top = 616.0
-offset_right = 64.0
-offset_bottom = 656.0
-
-[node name="PollenLabel" type="Label" parent="PollenLabelContainer"]
-layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = 84.0
-offset_top = -24.0
-offset_right = 340.0
-offset_bottom = 56.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 4
-theme_override_font_sizes/font_size = 32
-text = "0"
-vertical_alignment = 1
-
-[node name="Sprite2D" type="Sprite2D" parent="PollenLabelContainer"]
-position = Vector2(56, 56)
-scale = Vector2(3.875, 3.875)
-texture = ExtResource("3_fdl0h")
+texture = ExtResource("3_8glcj")
+region_enabled = true
+region_rect = Rect2(48, 88, 96, 88)
 
 [node name="IncomeTimer" type="Timer" parent="."]
 autostart = true

@@ -1,7 +1,6 @@
 extends CanvasLayer
 @onready var honey_label: Label = $HoneyLabelContainer/HoneyLabel
 @onready var upgrade_card : Object = GlobalPreloads.upgrade_card
-@onready var pollen_label: Label = $PollenLabelContainer/PollenLabel
 @onready var upgrade_container: HBoxContainer = $UpgradeContainer/UpgradeContainerBackground/UpgradeContainer
 
 #TODO card pulling mechanics
@@ -28,7 +27,6 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
 	honey_label.text = str(roundi(Global.honey_count))
-	pollen_label.text = str(roundi(Global.pollen_count))
 
 
 func get_card_from_db():

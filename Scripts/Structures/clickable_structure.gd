@@ -16,6 +16,7 @@ func _ready() -> void:
 
 func _on_clickable_area_mouse_on_structure(mouse_on_object: bool) -> void:
 	# when a player hovers on a structure, change shader to show
+	print("on thing")
 	if mouse_on_object:
 		sprite.material.set_shader_parameter("thickness", 10)
 	else:

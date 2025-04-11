@@ -8,6 +8,7 @@
 [node name="World" type="Node2D"]
 
 [node name="Ground" type="TextureRect" parent="."]
+modulate = Color(0.85098, 0.768627, 0.701961, 1)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -17,18 +18,9 @@ offset_right = 1280.0
 offset_bottom = 720.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("1_vadfg")
 stretch_mode = 1
-
-[node name="ColorRect" type="ColorRect" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 1280.0
-offset_bottom = 720.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.85098, 0.768627, 0.701961, 1)
 
 [node name="BigTree" parent="." instance=ExtResource("1_t1gg8")]
 position = Vector2(568, 360)
