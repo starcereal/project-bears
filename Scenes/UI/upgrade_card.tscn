@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://cbsdptvmm6com"]
+[gd_scene load_steps=11 format=3 uid="uid://cbsdptvmm6com"]
 
 [ext_resource type="Script" uid="uid://ddqv6imwnowgx" path="res://Scripts/UI/upgrade_card.gd" id="1_djitu"]
 [ext_resource type="Texture2D" uid="uid://bijxof3fwo577" path="res://Assets/UI/Picnic_card_design_big.png" id="2_ua3pj"]
+[ext_resource type="Texture2D" uid="uid://dns0l6sd7b65b" path="res://Assets/UI/Icons/riddlebear.png" id="3_pmi3y"]
 [ext_resource type="Texture2D" uid="uid://ctqi731tpaaa5" path="res://Assets/UI/Icons/honey_icon.png" id="3_si1xg"]
 [ext_resource type="AudioStream" uid="uid://b5beppas5vipy" path="res://Assets/Sounds/SFX/Cards/Coin Bag Drop Wood A.wav" id="4_ua3pj"]
 [ext_resource type="AudioStream" uid="uid://f80rmvgi2wl7" path="res://Assets/Sounds/SFX/Cards/Coin Bag Drop Wood B.wav" id="5_si1xg"]
@@ -32,6 +33,13 @@ scale = Vector2(0.09, 0.09)
 mouse_default_cursor_shape = 2
 texture_normal = ExtResource("2_ua3pj")
 
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 0
+offset_top = 8.0
+offset_right = 128.0
+offset_bottom = 32.0
+mouse_filter = 2
+
 [node name="UpgradeLabel" type="Label" parent="."]
 layout_mode = 0
 offset_top = 8.0
@@ -46,24 +54,35 @@ vertical_alignment = 1
 
 [node name="UpgradeIcon" type="Sprite2D" parent="."]
 position = Vector2(64, 80)
-texture = ExtResource("3_si1xg")
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_pmi3y")
 
 [node name="BuySound" type="AudioStreamPlayer2D" parent="."]
 stream = SubResource("AudioStreamRandomizer_4qpks")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 128.0
+offset_right = 112.0
+offset_bottom = 152.0
+mouse_filter = 2
 
 [node name="CostLabel" type="Label" parent="."]
 layout_mode = 0
 offset_left = 8.0
 offset_top = 128.0
-offset_right = 80.0
-offset_bottom = 152.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_right = 88.0
+offset_bottom = 153.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 18
 text = "16"
 horizontal_alignment = 2
 vertical_alignment = 1
 
 [node name="CostIcon" type="Sprite2D" parent="."]
-position = Vector2(96, 136)
+position = Vector2(99, 140)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("3_si1xg")
 

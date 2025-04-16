@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bwxe7m5ptpta" path="res://Scripts/UI/hud.gd" id="1_sprlj"]
 [ext_resource type="Texture2D" uid="uid://bmiqb568as32p" path="res://Assets/Graphics/Textures/Paper001_1K-PNG_Color.png" id="2_8glcj"]
-[ext_resource type="Texture2D" uid="uid://cijhivpj261fl" path="res://Assets/Graphics/Structures/picnic_assets_cleaner.png" id="3_8glcj"]
+[ext_resource type="Texture2D" uid="uid://cijhivpj261fl" path="res://Assets/UI/Icons/picnic_assets_cleaner.png" id="3_8glcj"]
 [ext_resource type="Shader" uid="uid://d0ig3ggw6poq5" path="res://Resources/roundedcorner.gdshader" id="3_vsu76"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ny26j"]
@@ -51,9 +51,9 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -288.0
+offset_left = -304.0
 offset_top = -96.0
-offset_right = 288.0
+offset_right = 304.0
 offset_bottom = 96.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -64,9 +64,9 @@ expand_mode = 1
 layout_mode = 0
 offset_left = 8.0
 offset_top = 8.0
-offset_right = 568.0
+offset_right = 600.0
 offset_bottom = 184.0
-theme_override_constants/separation = 25
+theme_override_constants/separation = 35
 alignment = 1
 
 [node name="HoneyLabelContainer" type="Control" parent="."]

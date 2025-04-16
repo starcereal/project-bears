@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cijhivpj261fl"
-path="res://.godot/imported/picnic_assets_cleaner.png-0d89c1131a255c790810e49a51c03c64.ctex"
+uid="uid://ckvvp2ajgw5b1"
+path="res://.godot/imported/TreeBuds.png-db6ceaa908a7650eefbcd9c8430932c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Graphics/Structures/picnic_assets_cleaner.png"
-dest_files=["res://.godot/imported/picnic_assets_cleaner.png-0d89c1131a255c790810e49a51c03c64.ctex"]
+source_file="res://Assets/UI/Icons/TreeBuds.png"
+dest_files=["res://.godot/imported/TreeBuds.png-db6ceaa908a7650eefbcd9c8430932c4.ctex"]
 
 [params]
 

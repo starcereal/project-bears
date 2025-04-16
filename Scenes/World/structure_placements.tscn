@@ -1,0 +1,82 @@
+[gd_scene load_steps=9 format=3 uid="uid://bl3odebdadbcl"]
+
+[ext_resource type="Texture2D" uid="uid://bwkcc816ugr6p" path="res://Assets/UI/Icons/bush_blueberry.png" id="2_u27so"]
+[ext_resource type="Shader" uid="uid://bib5nsi4kg4fk" path="res://Resources/WindSway.gdshader" id="2_x2wco"]
+[ext_resource type="Texture2D" uid="uid://dqhp4g1tlahhc" path="res://Assets/UI/Icons/bush_mixedberry.png" id="3_8mwq8"]
+[ext_resource type="Texture2D" uid="uid://bb2nwfk84snt8" path="res://Assets/UI/Icons/clovers.png" id="4_dbbdr"]
+[ext_resource type="Texture2D" uid="uid://dsd632l0tj0dm" path="res://Assets/UI/Icons/picniccloth.png" id="5_x2wco"]
+
+[sub_resource type="Shader" id="Shader_x2wco"]
+code = "shader_type canvas_item;
+render_mode blend_mix;
+
+// Wind settings
+uniform float speed = 1.0;
+uniform float minStrength : hint_range(0.0, 1.0) = 0.05;
+uniform float maxStrength : hint_range(0.0, 1.0) = 0.01;
+uniform float strengthScale = 100.0;
+uniform float interval = 3.5;
+uniform float detail = 1.0;
+uniform float distortion : hint_range(0.0, 1.0);
+uniform float heightOffset : hint_range(0.0, 1.0);
+uniform float offset = 0.0;
+
+float getWind(vec2 vertex, vec2 uv, float time) {
+	float diff = pow(maxStrength - minStrength, 2.0);
+	float strength = clamp(minStrength + diff + sin(time / interval) * diff, minStrength, maxStrength) * strengthScale;
+	float wind = (sin(time) + cos(time * detail)) * strength * max(0.0, (1.0 - uv.y) - heightOffset);
+	return wind;
+}
+
+void vertex() {
+	float time = TIME * speed + offset;
+	VERTEX.x += getWind(VERTEX.xy, UV, time);
+}"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6mnog"]
+shader = SubResource("Shader_x2wco")
+shader_parameter/speed = 0.5
+shader_parameter/minStrength = 0.05
+shader_parameter/maxStrength = 0.01
+shader_parameter/strengthScale = 100.0
+shader_parameter/interval = 3.5
+shader_parameter/detail = 1.0
+shader_parameter/distortion = 0.0
+shader_parameter/heightOffset = 0.0
+shader_parameter/offset = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_u4862"]
+shader = ExtResource("2_x2wco")
+shader_parameter/speed = 1.0
+shader_parameter/minStrength = 0.05
+shader_parameter/maxStrength = 0.01
+shader_parameter/strengthScale = 100.0
+shader_parameter/interval = 3.5
+shader_parameter/detail = 1.0
+shader_parameter/distortion = 0.0
+shader_parameter/heightOffset = 0.0
+shader_parameter/offset = 0.0
+
+[node name="StructurePlacements" type="Node2D"]
+
+[node name="BushBlueberry" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_6mnog")
+position = Vector2(320, -352)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_u27so")
+
+[node name="BushMixedberry" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_u4862")
+position = Vector2(-200, 32)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_8mwq8")
+
+[node name="Clovers" type="Sprite2D" parent="."]
+position = Vector2(144, 24)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("4_dbbdr")
+
+[node name="Picniccloth" type="Sprite2D" parent="."]
+position = Vector2(368, -72)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_x2wco")

@@ -17,15 +17,16 @@ func _ready() -> void:
 	if item == null:
 		queue_free()
 	if item != null:
-		if UpgradesDb.UPGRADES[item]["costttype"] == "honey":
-			cost_icon.texture = preload("res://Assets/UI/Icons/honey_icon.png")
-		elif UpgradesDb.UPGRADES[item]["costttype"] == "pollen":
-			cost_icon.texture = preload("res://Assets/UI/Icons/pollenicon.png")
+		#if UpgradesDb.UPGRADES[item]["costttype"] == "honey":
+			#cost_icon.texture = preload("res://Assets/UI/Icons/honey_icon.png")
+		#elif UpgradesDb.UPGRADES[item]["costttype"] == "pollen":
+			#cost_icon.texture = preload("res://Assets/UI/Icons/pollenicon.png")
 		
 		upgrade_name.text = UpgradesDb.UPGRADES[item]["displayname"]
 		upgrade_icon.texture = load(UpgradesDb.UPGRADES[item]["icon"])
 		cost_label.text = str(UpgradesDb.UPGRADES[item]["basecost"])
 		texture_button.tooltip_text = UpgradesDb.UPGRADES[item]["description"]
+		upgrade_icon.scale = Vector2(UpgradesDb.UPGRADES[item]["scale"],UpgradesDb.UPGRADES[item]["scale"])
 	
 
 func _on_texture_button_pressed() -> void:

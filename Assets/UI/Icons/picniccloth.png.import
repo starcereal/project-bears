@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xfh5jrtkl26x"
-path="res://.godot/imported/picnic_assets_2_cleaner.png-063b74f726054ab4b88559721472a47a.ctex"
+uid="uid://dsd632l0tj0dm"
+path="res://.godot/imported/picniccloth.png-dcb82ad5b803f916025c75bf21403f6d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Graphics/Structures/picnic_assets_2_cleaner.png"
-dest_files=["res://.godot/imported/picnic_assets_2_cleaner.png-063b74f726054ab4b88559721472a47a.ctex"]
+source_file="res://Assets/UI/Icons/picniccloth.png"
+dest_files=["res://.godot/imported/picniccloth.png-dcb82ad5b803f916025c75bf21403f6d.ctex"]
 
 [params]
 

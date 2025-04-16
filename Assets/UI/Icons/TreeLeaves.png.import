@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2o1kp0py5tp6"
-path="res://.godot/imported/bears_cleaner.png-5eb2f22d8b68c87d140a776600b12f57.ctex"
+uid="uid://2suygbkmyxwf"
+path="res://.godot/imported/TreeLeaves.png-31736b8d43d89f95fe0b7c5de5722839.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Graphics/Structures/bears_cleaner.png"
-dest_files=["res://.godot/imported/bears_cleaner.png-5eb2f22d8b68c87d140a776600b12f57.ctex"]
+source_file="res://Assets/UI/Icons/TreeLeaves.png"
+dest_files=["res://.godot/imported/TreeLeaves.png-31736b8d43d89f95fe0b7c5de5722839.ctex"]
 
 [params]
 
