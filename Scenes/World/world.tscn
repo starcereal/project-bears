@@ -1,10 +1,27 @@
-[gd_scene load_steps=6 format=3 uid="uid://lvbgewrsii8c"]
+[gd_scene load_steps=8 format=3 uid="uid://lvbgewrsii8c"]
 
 [ext_resource type="PackedScene" uid="uid://cokcnsuq4a15g" path="res://Scenes/Structures/BigTree.tscn" id="1_t1gg8"]
 [ext_resource type="Texture2D" uid="uid://bmiqb568as32p" path="res://Assets/Graphics/Textures/Paper001_1K-PNG_Color.png" id="1_vadfg"]
 [ext_resource type="PackedScene" uid="uid://cmfs13udvi5i6" path="res://Scenes/Utility/hidden_camera.tscn" id="2_yp2ti"]
 [ext_resource type="PackedScene" uid="uid://cv32lchg2nqn3" path="res://Scenes/UI/hud.tscn" id="3_3rhlx"]
 [ext_resource type="PackedScene" uid="uid://bl3odebdadbcl" path="res://Scenes/World/structure_placements.tscn" id="5_l1hd3"]
+[ext_resource type="Shader" uid="uid://b6jiku1m7ug57" path="res://Scenes/World/GodRays.gdshader" id="6_adcqc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7staa"]
+shader = ExtResource("6_adcqc")
+shader_parameter/angle = -0.3
+shader_parameter/position = -0.2
+shader_parameter/spread = 0.5
+shader_parameter/cutoff = 0.1
+shader_parameter/falloff = 0.2
+shader_parameter/edge_fade = 0.15
+shader_parameter/speed = 2.0
+shader_parameter/ray1_density = 8.0
+shader_parameter/ray2_density = 30.0
+shader_parameter/ray2_intensity = 0.3
+shader_parameter/color = Color(1, 0.9, 0.65, 0.8)
+shader_parameter/hdr = false
+shader_parameter/seed = 5.0
 
 [node name="World" type="Node2D"]
 
@@ -13,10 +30,9 @@ modulate = Color(0.85098, 0.768627, 0.701961, 1)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 2.0
-offset_top = -1.0
-offset_right = 1280.0
-offset_bottom = 720.0
+offset_top = 8.0
+offset_right = 1278.0
+offset_bottom = 729.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
@@ -24,13 +40,21 @@ texture = ExtResource("1_vadfg")
 stretch_mode = 1
 
 [node name="StructurePlacements" parent="." instance=ExtResource("5_l1hd3")]
-position = Vector2(568, 424)
+position = Vector2(568, 440)
 scale = Vector2(0.5, 0.5)
 
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_7staa")
+offset_left = 432.0
+offset_top = 152.0
+offset_right = 648.0
+offset_bottom = 400.0
+mouse_filter = 2
+
 [node name="BigTree" parent="." instance=ExtResource("1_t1gg8")]
-position = Vector2(568, 360)
+position = Vector2(584, 336)
 
 [node name="HiddenCamera" parent="." instance=ExtResource("2_yp2ti")]
-position = Vector2(584, 376)
+position = Vector2(576, 376)
 
 [node name="HUD" parent="." instance=ExtResource("3_3rhlx")]

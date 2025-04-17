@@ -74,7 +74,7 @@ shader_parameter/strengthScale = 100.0
 shader_parameter/interval = 3.5
 shader_parameter/detail = 1.0
 shader_parameter/distortion = 0.0
-shader_parameter/heightOffset = 0.0
+shader_parameter/heightOffset = 0.25
 shader_parameter/offset = 0.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_trgpq"]
