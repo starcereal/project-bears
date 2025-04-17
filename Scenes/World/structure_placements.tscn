@@ -1,10 +1,27 @@
-[gd_scene load_steps=9 format=3 uid="uid://bl3odebdadbcl"]
+[gd_scene load_steps=30 format=3 uid="uid://bl3odebdadbcl"]
 
 [ext_resource type="Texture2D" uid="uid://bwkcc816ugr6p" path="res://Assets/UI/Icons/bush_blueberry.png" id="2_u27so"]
 [ext_resource type="Shader" uid="uid://bib5nsi4kg4fk" path="res://Resources/WindSway.gdshader" id="2_x2wco"]
 [ext_resource type="Texture2D" uid="uid://dqhp4g1tlahhc" path="res://Assets/UI/Icons/bush_mixedberry.png" id="3_8mwq8"]
+[ext_resource type="Material" uid="uid://5cgxpqs1ys0j" path="res://Resources/SwayShader.tres" id="3_56lhw"]
 [ext_resource type="Texture2D" uid="uid://bb2nwfk84snt8" path="res://Assets/UI/Icons/clovers.png" id="4_dbbdr"]
 [ext_resource type="Texture2D" uid="uid://dsd632l0tj0dm" path="res://Assets/UI/Icons/picniccloth.png" id="5_x2wco"]
+[ext_resource type="Texture2D" uid="uid://bvdbs2quxrihf" path="res://Assets/Graphics/Structures/tree/TreeBloom.png" id="6_u4862"]
+[ext_resource type="Texture2D" uid="uid://s55refxkyoap" path="res://Assets/UI/Icons/jamjar.png" id="7_6mnog"]
+[ext_resource type="Texture2D" uid="uid://coycssxnm2e6v" path="res://Assets/UI/Icons/picnic_basket.png" id="8_aueu5"]
+[ext_resource type="Texture2D" uid="uid://ds3ukcfsimg0v" path="res://Assets/UI/Icons/sittingbear.png" id="9_es40x"]
+[ext_resource type="Texture2D" uid="uid://bwcid2o6ituqb" path="res://Assets/UI/Icons/pond.png" id="10_51h76"]
+[ext_resource type="Texture2D" uid="uid://dwoaylrb2te3s" path="res://Assets/UI/Icons/poppy.png" id="11_ooe0v"]
+[ext_resource type="Texture2D" uid="uid://dt5uyblx243aq" path="res://Assets/UI/Icons/pie.png" id="12_xxnmt"]
+[ext_resource type="Texture2D" uid="uid://dbkd6nywnewcu" path="res://Assets/UI/Icons/restingbear.png" id="13_xxnmt"]
+[ext_resource type="Texture2D" uid="uid://3uu0fi8itv80" path="res://Assets/UI/Icons/treehouse.png" id="14_6vonm"]
+[ext_resource type="Texture2D" uid="uid://dns0l6sd7b65b" path="res://Assets/UI/Icons/riddlebear.png" id="14_ockia"]
+[ext_resource type="Texture2D" uid="uid://n722o1lsjpfd" path="res://Assets/UI/Icons/sleepingbear.png" id="15_74fgm"]
+[ext_resource type="Texture2D" uid="uid://c0w71a8cubxg1" path="res://Assets/UI/Icons/standingbear.png" id="16_tajql"]
+[ext_resource type="Texture2D" uid="uid://c8qs2ivjqlyvj" path="res://Assets/UI/Icons/sando.png" id="17_l4jc5"]
+[ext_resource type="Texture2D" uid="uid://hfcewxh67avv" path="res://Assets/UI/Icons/sandobear.png" id="18_l4jc5"]
+[ext_resource type="Texture2D" uid="uid://bemx7k3gyjpy3" path="res://Assets/UI/Icons/bush_strawberry.png" id="19_5hd15"]
+[ext_resource type="Texture2D" uid="uid://ctqi731tpaaa5" path="res://Assets/UI/Icons/honey_icon.png" id="22_ojrt7"]
 
 [sub_resource type="Shader" id="Shader_x2wco"]
 code = "shader_type canvas_item;
@@ -45,9 +62,57 @@ shader_parameter/distortion = 0.0
 shader_parameter/heightOffset = 0.0
 shader_parameter/offset = 0.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_u4862"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hpx10"]
 shader = ExtResource("2_x2wco")
-shader_parameter/speed = 1.0
+shader_parameter/speed = 1.2
+shader_parameter/minStrength = 0.05
+shader_parameter/maxStrength = 0.01
+shader_parameter/strengthScale = 100.0
+shader_parameter/interval = 3.5
+shader_parameter/detail = 1.0
+shader_parameter/distortion = 0.0
+shader_parameter/heightOffset = 0.0
+shader_parameter/offset = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4p4ls"]
+shader = ExtResource("2_x2wco")
+shader_parameter/speed = 1.3
+shader_parameter/minStrength = 0.05
+shader_parameter/maxStrength = 0.01
+shader_parameter/strengthScale = 100.0
+shader_parameter/interval = 3.5
+shader_parameter/detail = 1.0
+shader_parameter/distortion = 0.0
+shader_parameter/heightOffset = 0.0
+shader_parameter/offset = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ojrt7"]
+shader = ExtResource("2_x2wco")
+shader_parameter/speed = 0.75
+shader_parameter/minStrength = 0.05
+shader_parameter/maxStrength = 0.01
+shader_parameter/strengthScale = 100.0
+shader_parameter/interval = 3.5
+shader_parameter/detail = 1.0
+shader_parameter/distortion = 0.0
+shader_parameter/heightOffset = 0.35
+shader_parameter/offset = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_74fgm"]
+shader = ExtResource("2_x2wco")
+shader_parameter/speed = 1.1
+shader_parameter/minStrength = 0.05
+shader_parameter/maxStrength = 0.01
+shader_parameter/strengthScale = 100.0
+shader_parameter/interval = 3.5
+shader_parameter/detail = 1.0
+shader_parameter/distortion = 0.0
+shader_parameter/heightOffset = 0.0
+shader_parameter/offset = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_56lhw"]
+shader = ExtResource("2_x2wco")
+shader_parameter/speed = 1.3
 shader_parameter/minStrength = 0.05
 shader_parameter/maxStrength = 0.01
 shader_parameter/strengthScale = 100.0
@@ -59,24 +124,197 @@ shader_parameter/offset = 0.0
 
 [node name="StructurePlacements" type="Node2D"]
 
+[node name="TreeBloom" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-3.05176e-05, -280)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("6_u4862")
+
 [node name="BushBlueberry" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_6mnog")
 position = Vector2(320, -352)
-scale = Vector2(0.7, 0.7)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_u27so")
+
+[node name="BushBlueberry2" type="Sprite2D" parent="BushBlueberry"]
+material = SubResource("ShaderMaterial_6mnog")
+position = Vector2(-112, 112)
+texture = ExtResource("2_u27so")
+
+[node name="BushBlueberry3" type="Sprite2D" parent="BushBlueberry"]
+material = SubResource("ShaderMaterial_hpx10")
+position = Vector2(80, 128)
 texture = ExtResource("2_u27so")
 
 [node name="BushMixedberry" type="Sprite2D" parent="."]
-material = SubResource("ShaderMaterial_u4862")
-position = Vector2(-200, 32)
-scale = Vector2(0.7, 0.7)
+material = ExtResource("3_56lhw")
+position = Vector2(-160, -40)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_8mwq8")
+
+[node name="BushMixedberry2" type="Sprite2D" parent="BushMixedberry"]
+material = SubResource("ShaderMaterial_4p4ls")
+position = Vector2(240, 0)
+texture = ExtResource("3_8mwq8")
+
+[node name="BushMixedberry3" type="Sprite2D" parent="BushMixedberry"]
+material = ExtResource("3_56lhw")
+position = Vector2(453.333, 0)
 texture = ExtResource("3_8mwq8")
 
 [node name="Clovers" type="Sprite2D" parent="."]
-position = Vector2(144, 24)
-scale = Vector2(0.8, 0.8)
+position = Vector2(136, -48)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_dbbdr")
+
+[node name="Clovers2" type="Sprite2D" parent="Clovers"]
+position = Vector2(-784, -16)
+texture = ExtResource("4_dbbdr")
+
+[node name="Clovers3" type="Sprite2D" parent="Clovers"]
+position = Vector2(-528, -368)
+texture = ExtResource("4_dbbdr")
+
+[node name="Clovers4" type="Sprite2D" parent="Clovers"]
+position = Vector2(416, 0)
+texture = ExtResource("4_dbbdr")
+
+[node name="Clovers5" type="Sprite2D" parent="Clovers"]
+position = Vector2(704, -112)
+texture = ExtResource("4_dbbdr")
+
+[node name="Clovers6" type="Sprite2D" parent="Clovers"]
+position = Vector2(720, -400)
+texture = ExtResource("4_dbbdr")
+flip_h = true
+
+[node name="Clovers7" type="Sprite2D" parent="Clovers"]
+position = Vector2(688, -640)
 texture = ExtResource("4_dbbdr")
 
 [node name="Picniccloth" type="Sprite2D" parent="."]
-position = Vector2(368, -72)
-scale = Vector2(0.5, 0.5)
+position = Vector2(320, -160)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("5_x2wco")
+
+[node name="Jamjar" type="Sprite2D" parent="."]
+position = Vector2(264, -168)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("7_6mnog")
+
+[node name="PicnicBasket" type="Sprite2D" parent="."]
+position = Vector2(56, -104)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("8_aueu5")
+
+[node name="Sittingbear" type="Sprite2D" parent="."]
+position = Vector2(352, -192)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_es40x")
+
+[node name="Pond" type="Sprite2D" parent="."]
+position = Vector2(-168, -192)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("10_51h76")
+
+[node name="Poppy" type="Sprite2D" parent="."]
+position = Vector2(-48, -96)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("11_ooe0v")
+
+[node name="Poppy2" type="Sprite2D" parent="Poppy"]
+position = Vector2(1240, -400)
+scale = Vector2(1, 1)
+texture = ExtResource("11_ooe0v")
+
+[node name="Poppy3" type="Sprite2D" parent="Poppy"]
+position = Vector2(-320, -960)
+scale = Vector2(1, 1)
+texture = ExtResource("11_ooe0v")
+
+[node name="Poppy4" type="Sprite2D" parent="Poppy"]
+position = Vector2(-920, -240)
+scale = Vector2(1, 1)
+texture = ExtResource("11_ooe0v")
+
+[node name="Poppy5" type="Sprite2D" parent="Poppy"]
+position = Vector2(-520, -240)
+scale = Vector2(1, 1)
+texture = ExtResource("11_ooe0v")
+
+[node name="Poppy6" type="Sprite2D" parent="Poppy"]
+position = Vector2(-1800, -800)
+scale = Vector2(1, 1)
+texture = ExtResource("11_ooe0v")
+
+[node name="Pie" type="Sprite2D" parent="."]
+position = Vector2(288, -144)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("12_xxnmt")
+
+[node name="Restingbear" type="Sprite2D" parent="."]
+position = Vector2(-240, -32)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("13_xxnmt")
+flip_h = true
+
+[node name="Sleepingbear" type="Sprite2D" parent="."]
+position = Vector2(-384, -344)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("15_74fgm")
+
+[node name="Treehouse" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_ojrt7")
+position = Vector2(-288, -328)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("14_6vonm")
+
+[node name="Riddlebear" type="Sprite2D" parent="."]
+position = Vector2(-328, -272)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("14_ockia")
+
+[node name="Standingbear" type="Sprite2D" parent="."]
+position = Vector2(368, -64)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("16_tajql")
+flip_h = true
+
+[node name="Picniccloth2" type="Sprite2D" parent="."]
+position = Vector2(-352, -104)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("5_x2wco")
+
+[node name="Sando" type="Sprite2D" parent="."]
+position = Vector2(-312, -112)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("17_l4jc5")
+
+[node name="Sandobear" type="Sprite2D" parent="."]
+position = Vector2(-368, -128)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("18_l4jc5")
+flip_h = true
+
+[node name="BushStrawberry" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_74fgm")
+position = Vector2(160, -336)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("19_5hd15")
+
+[node name="BushStrawberry2" type="Sprite2D" parent="BushStrawberry"]
+material = SubResource("ShaderMaterial_56lhw")
+position = Vector2(-140, 0)
+scale = Vector2(1, 1)
+texture = ExtResource("19_5hd15")
+
+[node name="BushStrawberry3" type="Sprite2D" parent="BushStrawberry"]
+material = ExtResource("3_56lhw")
+position = Vector2(-300, 0)
+scale = Vector2(1, 1)
+texture = ExtResource("19_5hd15")
+
+[node name="HoneyIcon" type="Sprite2D" parent="."]
+position = Vector2(-320, -136)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("22_ojrt7")
