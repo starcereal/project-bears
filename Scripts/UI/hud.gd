@@ -69,7 +69,57 @@ func upgrade_hud(upgrade):
 	current_options -= 1
 	collected_upgrades.append(upgrade)
 	match upgrade:
-		pass
+		"poppy":
+			Global.honey_per_second += 1
+		"picniccloth":
+			Global.honey_per_second += 5
+		"music":
+			Global.honey_per_second += 5
+		"pond":
+			Global.honey_per_second += 5
+		"sittingbear":
+			Global.honey_per_click += 3
+		"sunlight":
+			Global.honey_per_second += 6
+		"blueberry":
+			Global.honey_per_second += 8
+		"cloverfield":
+			Global.honey_per_second += 11
+		"treelevel2":
+			#level up bar?
+			pass
+		"jamjar":
+			Global.honey_per_second += 14
+		"wind":
+			Global.honey_per_second += 17
+		"beehive":
+			Global.honey_per_second += 20
+		"picnicbasket":
+			Global.honey_per_click *= 1.5
+		"pie":
+			Global.honey_per_second += 22
+		"sando":
+			Global.honey_per_second += 31
+		"sandobear":
+			Global.honey_per_second += 40
+		"mixedberry":
+			Global.honey_per_second += 50
+		"treelevel3":
+			Global.honey_per_click *= 2
+		"coolmusic":
+			Global.honey_per_second += 60
+		"honeypot":
+			Global.honey_per_second += 65
+		"strawberry":
+			Global.honey_per_second += 80
+		"picniccloth2":
+			Global.honey_per_second += 100
+		"sleepingbear":
+			Global.honey_per_click += 20
+		"treelevel4":
+			Global.honey_per_click *= 2
+		"winner":
+			pass
 	populate_upgrade_container()
 	#here is where the magic happens
 

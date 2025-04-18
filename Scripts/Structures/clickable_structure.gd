@@ -25,10 +25,10 @@ func _on_clickable_area_mouse_on_structure(mouse_on_object: bool) -> void:
 func give_currency():
 	match currency_type:
 		0: #honey
-			Global.honey_count += 1
+			Global.honey_count += Global.honey_per_click
 		1: #pollen
 			Global.pollen_count += 1
 		2: #diamond
 			Global.diamond_count += 1
 		_:
-			Global.honey_count += 1
+			Global.honey_count += Global.honey_per_click

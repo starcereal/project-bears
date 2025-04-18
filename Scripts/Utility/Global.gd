@@ -1,8 +1,8 @@
 extends Node
 
 # hold currency here; hold as float, show as int
-var honey_count : float = 2500000
-var pollen_count : float = 25000000
+var honey_count : float = 0
+var pollen_count : float = 0
 var diamond_count : float = 0
 
 # hold total money per second, we can run it through HUD

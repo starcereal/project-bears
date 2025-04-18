@@ -26,6 +26,7 @@ UpgradesDb="*res://Scripts/Utility/UpgradesDB.gd"
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/mode="canvas_items"
+mouse_cursor/custom_image="uid://nxybhv0di6vl"
 
 [global_group]
 

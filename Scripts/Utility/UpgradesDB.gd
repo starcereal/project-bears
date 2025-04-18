@@ -15,7 +15,7 @@ const UPGRADES = {
 		"displayname": "Poppy",
 		"description": "Lay the foundation.",
 		"costttype": "honey",
-		"basecost": 25,
+		"basecost": 20,
 		"prerequisite": [],
 		"scale": .45
 	},
@@ -24,7 +24,7 @@ const UPGRADES = {
 		"displayname": "Picnic Cloth",
 		"description": "Increase the power of your clicks.",
 		"costttype": "honey",
-		"basecost": 30,
+		"basecost": 35,
 		"prerequisite": [],
 		"scale": .25
 	},
@@ -32,8 +32,8 @@ const UPGRADES = {
 		"icon": ICON_PATH + "petting_cursor.png",
 		"displayname": "Music",
 		"description": "Don't stop that music.",
-		"costttype": "pollen",
-		"basecost": 80,
+		"costttype": "honey",
+		"basecost": 50,
 		"prerequisite": [],
 		"scale": 1
 	},
@@ -41,7 +41,7 @@ const UPGRADES = {
 		"icon": ICON_PATH + "pond.png",
 		"displayname": "Pond",
 		"description": "Increase the power of your clicks.",
-		"costttype": "pollen",
+		"costttype": "honey",
 		"basecost": 80,
 		"prerequisite": [],
 		"scale": .2
@@ -51,7 +51,7 @@ const UPGRADES = {
 		"displayname": "Sitting Bear",
 		"description": "The wilds needs more sitters..",
 		"costttype": "honey",
-		"basecost": 100,
+		"basecost": 105,
 		"prerequisite": [],
 		"scale": .4
 	},
@@ -59,8 +59,8 @@ const UPGRADES = {
 		"icon": ICON_PATH + "pet_cursor.png",
 		"displayname": "Sunlight",
 		"description": "Let the sun shine upon you, warrior.",
-		"costttype": "pollen",
-		"basecost": 45,
+		"costttype": "honey",
+		"basecost": 265,
 		"prerequisite": [],
 		"scale": 1
 	},
@@ -68,8 +68,8 @@ const UPGRADES = {
 		"icon": ICON_PATH + "bush_blueberry.png",
 		"displayname": "Blueberry",
 		"description": "Increase the power of your clicks.",
-		"costttype": "pollen",
-		"basecost": 200,
+		"costttype": "honey",
+		"basecost": 333,
 		"prerequisite": [],
 		"scale": .3
 	},
@@ -78,7 +78,7 @@ const UPGRADES = {
 		"displayname": "Clover Field",
 		"description": "Drops a cool flower.",
 		"costttype": "honey",
-		"basecost": 100,
+		"basecost": 500,
 		"prerequisite": [],
 		"scale": .3
 	},
@@ -87,7 +87,7 @@ const UPGRADES = {
 		"displayname": "Level 2 Tree",
 		"description": "Drops a cool flower.",
 		"costttype": "honey",
-		"basecost": 200,
+		"basecost": 600,
 		"prerequisite": [],
 		"scale": .075
 
@@ -97,35 +97,35 @@ const UPGRADES = {
 		"displayname": "Jam Jar",
 		"description": "Delicious berry JAM.",
 		"costttype": "honey",
-		"basecost": 100,
-		"prerequisite": ["blueberry"],
+		"basecost": 750,
+		"prerequisite": [],
 		"scale": .7
 	},
 	"wind": {
 		"icon": ICON_PATH + "pet_cursor.png",
 		"displayname": "Wind",
 		"description": "Wind to blow honey to you.",
-		"costttype": "pollen",
-		"basecost": 75,
-		"prerequisite": ["treelevel2"],
+		"costttype": "honey",
+		"basecost": 850,
+		"prerequisite": [],
 		"scale": 1
 	},
 	"beehive": {
 		"icon": ICON_PATH + "beehive.png",
 		"displayname": "Beehive",
 		"description": "SUMMON THE BEES.",
-		"costttype": "pollen",
-		"basecost": 75,
-		"prerequisite": ["treelevel2"],
+		"costttype": "honey",
+		"basecost": 1000,
+		"prerequisite": [],
 		"scale": .6
 	},
 	"pie": {
 		"icon": ICON_PATH + "pie.png",
 		"displayname": "Riddler Pie",
 		"description": "A mix of honey and fruits combine to create something yummy.",
-		"costttype": "pollen",
+		"costttype": "honey",
 		"basecost": 1175,
-		"prerequisite": ["treelevel2"],
+		"prerequisite": [],
 		"scale": .8
 	},
 	"picnicbasket": {
@@ -133,8 +133,8 @@ const UPGRADES = {
 		"displayname": "Picnic Basket",
 		"description": "Drops a cool flower.",
 		"costttype": "honey",
-		"basecost": 750,
-		"prerequisite": ["treelevel2"],
+		"basecost": 1337,
+		"prerequisite": [],
 		"scale": .65
 	},
 	"sando": {
@@ -142,25 +142,25 @@ const UPGRADES = {
 		"displayname": "Sando",
 		"description": "Whats a picnic w/o sando?",
 		"costttype": "honey",
-		"basecost": 750,
-		"prerequisite": ["treelevel2"],
+		"basecost": 1450,
+		"prerequisite": [],
 		"scale": 1
 	},
 	"sandobear": {
-		"icon": ICON_PATH + "sando.png",
+		"icon": ICON_PATH + "sandobear.png",
 		"displayname": "Sando Bear",
 		"description": "The bear hungers for sando.",
 		"costttype": "honey",
-		"basecost": 1005,
-		"prerequisite": ["sando"],
+		"basecost": 1738,
+		"prerequisite": [],
 		"scale": .5
 	},
 	"mixedberry": {
 		"icon": ICON_PATH + "bush_mixedberry.png",
 		"displayname": "Mixed Berries",
 		"description": "Increase the power of your clicks.",
-		"costttype": "pollen",
-		"basecost": 1738,
+		"costttype": "honey",
+		"basecost": 1993,
 		"prerequisite": [],
 		"scale": .25
 	},
@@ -169,7 +169,7 @@ const UPGRADES = {
 		"displayname": "Level 3 Tree",
 		"description": "Drops a cool flower.",
 		"costttype": "honey",
-		"basecost": 1800,
+		"basecost": 2200,
 		"prerequisite": ["treelevel2"],
 		"scale": .075
 	},
@@ -178,8 +178,8 @@ const UPGRADES = {
 		"displayname": "Cool Music",
 		"description": "Drops a cool flower.",
 		"costttype": "honey",
-		"basecost": 755,
-		"prerequisite": ["treelevel3"],
+		"basecost": 2500,
+		"prerequisite": [],
 		"scale": .45
 	},
 	"honeypot": {
@@ -187,17 +187,17 @@ const UPGRADES = {
 		"displayname": "Honey Pot",
 		"description": "A place to store honey.",
 		"costttype": "honey",
-		"basecost": 10000,
-		"prerequisite": ["treelevel3"],
+		"basecost": 2750,
+		"prerequisite": [],
 		"scale": .8
 	},
 	"strawberry": {
 		"icon": ICON_PATH + "bush_strawberry.png",
 		"displayname": "Strawberry",
 		"description": "Increase the power of your clicks.",
-		"costttype": "pollen",
-		"basecost": 45,
-		"prerequisite": ["blueberry"],
+		"costttype": "honey",
+		"basecost": 3000,
+		"prerequisite": [],
 		"scale": .35
 	},
 	"clicksound": {
@@ -205,8 +205,8 @@ const UPGRADES = {
 		"displayname": "Cool Click Sound",
 		"description": "Drops a cool flower.",
 		"costttype": "honey",
-		"basecost": 10000,
-		"prerequisite": ["treelevel3"],
+		"basecost": 3005,
+		"prerequisite": [],
 		"scale": 1
 	},
 	"picniccloth2": {
@@ -214,8 +214,8 @@ const UPGRADES = {
 		"displayname": "Cooler Picnic Cloth",
 		"description": "Come hang around a while.",
 		"costttype": "honey",
-		"basecost": 10000,
-		"prerequisite": ["treelevel3"],
+		"basecost": 3200,
+		"prerequisite": [],
 		"scale": .25
 	},
 	"sleepingbear": {
@@ -223,8 +223,8 @@ const UPGRADES = {
 		"displayname": "Sleeping Bear",
 		"description": "Drops a cool flower.",
 		"costttype": "honey",
-		"basecost": 10000,
-		"prerequisite": ["treelevel3"],
+		"basecost": 4000,
+		"prerequisite": [],
 		"scale": .4
 	},
 	"treelevel4": {
@@ -232,8 +232,8 @@ const UPGRADES = {
 		"displayname": "Level 4 Tree",
 		"description": "In full bloom..",
 		"costttype": "honey",
-		"basecost": 10000,
-		"prerequisite": ["treelevel3"],
+		"basecost": 4500,
+		"prerequisite": [],
 		"scale": .075
 	},
 	"winner": {
@@ -241,7 +241,7 @@ const UPGRADES = {
 		"displayname": "Riddle Bear (YOU WIN)",
 		"description": "The Riddle Bear has an answer for you.",
 		"costttype": "honey",
-		"basecost": 15000,
+		"basecost": 5500,
 		"prerequisite": ["treelevel4"],
 		"scale": .3
 	},
