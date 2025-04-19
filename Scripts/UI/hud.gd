@@ -3,6 +3,7 @@ extends CanvasLayer
 @onready var upgrade_card : Object = GlobalPreloads.upgrade_card
 @onready var upgrade_container: HBoxContainer = $UpgradeContainer/UpgradeContainerBackground/UpgradeContainer
 
+
 #TODO card pulling mechanics
 # create a deck
 # when player clicks card, pull next card from deck.
@@ -21,6 +22,7 @@ var collected_upgrades = []
 var collected_upgrade_card_types = []
 var upgrade_options = []
 var current_options : int = 0
+var structure_list
 
 func _ready() -> void:
 	populate_upgrade_container()
