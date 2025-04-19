@@ -31,6 +31,8 @@ mouse_cursor/custom_image="uid://nxybhv0di6vl"
 [global_group]
 
 hud=""
+bigtree=""
+structurelist=""
 
 [gui]
 

@@ -23,9 +23,12 @@ var collected_upgrade_card_types = []
 var upgrade_options = []
 var current_options : int = 0
 var structure_list
+var big_tree
 
 func _ready() -> void:
 	populate_upgrade_container()
+	big_tree = get_tree().get_first_node_in_group("bigtree")
+	structure_list = get_tree().get_first_node_in_group("structurelist")
 
 func _physics_process(_delta: float) -> void:
 	honey_label.text = str(roundi(Global.honey_count))
@@ -55,6 +58,7 @@ func get_card_from_db():
 		return next_item
 	else:
 		return null
+
 
 func draw_from_deck():
 	pass
@@ -89,7 +93,7 @@ func upgrade_hud(upgrade):
 			Global.honey_per_second += 11
 		"treelevel2":
 			#level up bar?
-			pass
+			big_tree.change_tree_sprite(2)
 		"jamjar":
 			Global.honey_per_second += 14
 		"wind":
@@ -108,6 +112,7 @@ func upgrade_hud(upgrade):
 			Global.honey_per_second += 50
 		"treelevel3":
 			Global.honey_per_click *= 2
+			big_tree.change_tree_sprite(3)
 		"coolmusic":
 			Global.honey_per_second += 60
 		"honeypot":
@@ -120,6 +125,7 @@ func upgrade_hud(upgrade):
 			Global.honey_per_click += 20
 		"treelevel4":
 			Global.honey_per_click *= 2
+			big_tree.change_tree_sprite(4)
 		"winner":
 			pass
 	populate_upgrade_container()

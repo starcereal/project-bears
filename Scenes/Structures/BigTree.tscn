@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cokcnsuq4a15g"]
 
 [ext_resource type="Script" uid="uid://bqtvcs7hyb1nv" path="res://Scripts/Structures/clickable_structure.gd" id="1_vyo28"]
-[ext_resource type="Texture2D" uid="uid://bvdbs2quxrihf" path="res://Assets/Graphics/Structures/tree/TreeBloom.png" id="2_trgpq"]
+[ext_resource type="Texture2D" uid="uid://cuv07g0rswdoc" path="res://Assets/Graphics/Structures/tree/TreeBare.png" id="2_trgpq"]
 [ext_resource type="PackedScene" uid="uid://5qmvhqorv3gl" path="res://Scenes/Structures/clickable_area.tscn" id="4_6wuft"]
 
 [sub_resource type="Shader" id="Shader_trgpq"]
@@ -80,7 +80,7 @@ shader_parameter/offset = 0.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_trgpq"]
 size = Vector2(128, 128)
 
-[node name="BigTree" type="Node2D" node_paths=PackedStringArray("sprite")]
+[node name="BigTree" type="Node2D" node_paths=PackedStringArray("sprite") groups=["bigtree"]]
 script = ExtResource("1_vyo28")
 sprite = NodePath("BigTreeSprite")
 
